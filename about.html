@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisabeta's Portfolio</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">Ilustratelis<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+
+        </ul>
+    </header>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout Me</h2>
+                <p>I am girl who is passionate about illustration especially.I like how I can tell a story without using any words and I especially love adding details.For over a year I've been drawing digitally, but I started with watercolors on paper and sometimes I would use gouache and acrylic paint for other kinds of projects.Besides illustration, I do modern calligraphy as well.I hope you like my work and thanks for stopping by!</p>
+            </div>
+            <div class="col150">
+            <div class="imgBx">
+                <img src="./images/Bookworm gardener .png">
+            </div>
+         </div>
+         </div>
+
+    </section>
+
+
+    <div class="copyrightText">
+        <p>Elisabeta Moruz © 2022. All Rights Reserved.</p>
+
+    </div>
+
+
+    
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active')
+    }
+    
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisabeta's Portfolio</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">Ilustratelis<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+
+        </ul>
+    </header>
+
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>ontact Me</h2>
+            <div>
+                <div class="contactForm" id="form">
+                    <h3>Send Message</h3>
+                    <form action="#">
+                    <div class="inputBox">
+                        <input type="text" id="Name" placeholder="Name" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="Email" placeholder="Email" required>
+                    </div>
+                    <div class="inputBox">
+                        <textarea placeholder="Message"></textarea>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                    </form>
+                </div>
+        
+    </section>
+
+
+
+    <div class="copyrightText">
+        <p>Elisabeta Moruz © 2022. All Rights Reserved.</p>
+
+    </div>
+
+
+
+
+<script type="text/javascript">
+    window.addEventListener('scroll', function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active')
+    }
+
+</script>
+
+<script>
+    var form = document.getElementById('form')
+
+form.addEventListener('submit',function(event){
+    event.preventDefault()
+
+    var name = document.getElementById('Name').value
+
+    console.log(name)
+
+    var email = document.getElementById('Email').value
+
+    console.log(email)
+})
+</script>
+
+
+
+    </body>
+    
+    </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisabeta's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">Ilustratelis<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>The World Of Illustration</h2>
+            <p>Welcome!I'm Elisabeta and I'm passionate about illustration,children's book illustrations especially.I like how I can tell a story without using any words and I especially love adding details.I hope you like my work and thanks for stopping by!</p>
+
+        </div>
+
+        
+
+    </section>
+    
+    <div class="row">
+        <div class="column"><img style="width: 100%;" src="./images/Anne of Green Gables.png"  alt="">
+        <p>Watercolor illustrations</p>
+        </div>
+        <div class="column"><img style="width: 100%;" src="./images/Autumn afternoon.png"  alt="">
+        <p>Digital illustrations</p>
+        </div>
+        </div>
+        <div class="column"><img style="width: 100%;" src="./images/family.png" alt="">
+        <p>Acrylic paintings</p>
+        </div>
+
+    <div class="copyrightText">
+        <p>Elisabeta Moruz © 2022. All Rights Reserved.</p>
+
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active')
+    }
+    
+
+
+    </script>
+   
+
+</body>
+</html>
